@@ -88,8 +88,10 @@ The service sends a single `su -c 'service call SurfaceFlinger 1015 ...'` shell 
 ## Requirements
 
 - Rooted Android device (tested: Pixel 4a 5G, Android 14, Kitsune Mask / Magisk fork)
-- Root access via `su` (Magisk or compatible)
+- Root access via `su` (Magisk or compatible) — **root is required**
 - Android 12+ (SurfaceFlinger transaction 1015 with `i32 1` prefix)
+
+Note: Shizuku alone is not sufficient. The `service call SurfaceFlinger 1015` transaction requires root (uid 0). The shell user (uid 2000) that Shizuku provides gets "Operation not permitted" when attempting to set the color transform. Shizuku support is included in the app for status reporting and future use, but the core color matrix function requires root.
 
 ## Building
 
