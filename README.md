@@ -8,7 +8,7 @@ A system-wide display color correction app for **rooted Android 14** devices (de
 
 - **Color temperature** — 1000 K (candlelight) to 10 000 K (cool daylight), log-scale slider centered at 6500 K neutral
 - **Saturation** — 0 % (grayscale) to 100 % (full), via Android's `ColorDisplayManager`
-- **Gamma** — 4.0 (very dark) to 0.25 (very bright), with a midtone-correcting linear approximation
+- **Gamma** — 4.0 (very dark) to 0.1 (very bright), with a midtone-correcting linear approximation — 2.2 default, 1.0 "native"
 - **RGB correction** — independent red, green, blue channel scaling (0–100 %), done akin to Photoshop's "color mode" or "fade-to-color" wherein hue/saturation adjusted leaving luminosity intact
 - **Profiles** — named presets with one-tap loading; built-in profiles for common scenarios
 - **Persistent** — survives app close, screen off/on, and reboots via a foreground service and boot receiver
